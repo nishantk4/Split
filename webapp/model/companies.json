@@ -1,0 +1,22 @@
+{
+	"companies" : [
+		{
+			"name": "Carot Ltd." ,
+			"city": "Cheshire" ,
+			"state": "NH",
+			"country": "Belknap",
+			"revenue": "3235235235.23"  
+		},		{
+			"name": "tata." ,
+			"city": "noida" ,
+			"state": "dl",
+			"country": "Belknap",
+			"revenue": "35235.23"  
+		},		{
+			"name": "invenio" ,
+			"city": "ajmer" ,
+			"state": "pune",
+			"country": "india",
+			"revenue": "1225235235.23"  
+		}]
+}

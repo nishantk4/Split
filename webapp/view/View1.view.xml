@@ -1,0 +1,161 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="split.split.controller.View1" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Dashboard For Employee">
+					<content>
+						<sap.ui.layout:ResponsiveSplitter xmlns:sap.ui.layout="sap.ui.layout" defaultPane="__pane0" id="splitter0">
+							<sap.ui.layout:rootPaneContainer>
+								<sap.ui.layout:PaneContainer id="container0">
+									<sap.ui.layout:panes>
+										<sap.ui.layout:SplitPane requiredParentWidth="50" id="pane0">
+											<sap.ui.layout:content>
+												<Panel height="100%" backgroundDesign="Transparent" id="panel0">
+													<layoutData>
+														<sap.ui.layout:SplitterLayoutData id="data1"/>
+													</layoutData>
+													<content>
+														<GroupHeaderListItem id="item0"/>
+														<List noDataText="Drop list items here" id="list1">
+															<items>
+																<StandardListItem type="Navigation" title="Gargi Sehgal" description="Trainee Consultant" icon="sap-icon://picture" id="item0_1573071006373"
+																	press="onPress" detailPress="onPress"/>
+															</items>
+														</List>
+														<Table items="{/companies}"  id="listitem">
+															<items>
+																<ColumnListItem type="Active">
+																	<cells>
+																		<Text text="{name}" ></Text>
+																		<Text text="{city}" ></Text>
+																		<Text text="{state}" ></Text>
+																		<Text text="{country}"></Text>
+																		<Text text="{revenue}"></Text>
+																	</cells>
+																</ColumnListItem>
+															</items>
+															<columns>
+																<Column>
+																	<Text text="name"/>
+																</Column>
+																<Column>
+																	<Text text="city"/>
+																</Column>
+																<Column>
+																	<Text text="state"/>
+																</Column>
+																<Column>
+																	<Text text="country"/>
+																</Column>
+																<Column>
+																	<Text text="revenue"/>
+																</Column>
+															</columns>
+														</Table>
+													</content>
+												</Panel>
+											</sap.ui.layout:content>
+										</sap.ui.layout:SplitPane>
+										<sap.ui.layout:SplitPane requiredParentWidth="50" id="pane1">
+											<sap.ui.layout:content>
+												<Panel height="100%" backgroundDesign="Solid" id="panel1">
+													<layoutData>
+														<sap.ui.layout:SplitterLayoutData id="data3"/>
+													</layoutData>
+													<content>
+														<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+															<items>
+																<IconTabFilter icon="sap-icon://hint" text="Personel Info" id="hey">
+																	<content>
+																		<Label text="Text" labelFor="inputText"/><Input id="inputText" type="Text" class="sapUiSmallMarginBottom" placeholder="Enter Text ..." fieldWidth="25%" width="100%"/>
+																		<Label text="Email" labelFor="inputEmail"/>
+																		<Input id="inputEmail" type="Email" class="sapUiSmallMarginBottom" placeholder="Enter Email ..."/>
+																		<Label text="Telephone" labelFor="inputTel"/>
+																		<Input id="inputTel" type="Tel" class="sapUiSmallMarginBottom" placeholder="Enter Telephone Number ..."/>
+																		<Label text="Number" labelFor="inputNumber"/>
+																		<Input id="inputNumber" type="Number" class="sapUiSmallMarginBottom" placeholder="Enter a Number ..."/>
+																		<Label text="Code" labelFor="inputUrl"/>
+																		<ActionSelect id="select0"/>
+																	</content>
+																</IconTabFilter>
+																<IconTabFilter icon="sap-icon://attachment" text="Core Skills">
+																	<content></content>
+																</IconTabFilter>
+																<IconTabFilter icon="sap-icon://notes" text="language">
+																	<content>
+																		<VBox width="100%" direction="Column" id="vbox0">
+																			<items>
+																				<CheckBox xmlns="sap.m" text="C" selected="false" id="box6"/>
+																				<CheckBox xmlns="sap.m" text="C++" selected="false" id="box2"/>
+																				<CheckBox xmlns="sap.m" text="Java" selected="false" id="box5"/>
+																				<CheckBox xmlns="sap.m" text="Python" selected="false" id="box3"/>
+																				<CheckBox xmlns="sap.m" text="ABAP" selected="false" id="box4"/>
+																				<Button xmlns="sap.m" text="Submit" id="button2"/>
+																			</items>
+																		</VBox>
+																	</content>
+																</IconTabFilter>
+															</items>
+															<content>
+																<Table noDataText="Drop column list items here and columns in the area above" id="table0">
+																	<items>
+																		<ColumnListItem type="Active" id="item11">
+																			<cells>
+																				<Text text="Java" id="text"/>
+																				<Text text="Begineer" id="text0"/>
+																			</cells>
+																		</ColumnListItem>
+																		<ColumnListItem type="Active" id="item2">
+																			<cells>
+																				<Text text="Python" id="text1"/>
+																				<Text text="Begineer" id="text2"/>
+																			</cells>
+																		</ColumnListItem>
+																		<ColumnListItem type="Active" id="item3">
+																			<cells>
+																				<Text text="Abap" id="text3"/>
+																				<Text text="Advance" id="text4"/>
+																			</cells>
+																		</ColumnListItem>
+																		<ColumnListItem type="Active" id="item4">
+																			<cells>
+																				<Text text="C++" id="text5"/>
+																				<Text text="Begineer" id="text6"/>
+																			</cells>
+																		</ColumnListItem>
+																		<ColumnListItem type="Active" id="item5">
+																			<cells>
+																				<Text text="R" id="text7"/>
+																				<Text text="Begineer" id="text8"/>
+																			</cells>
+																		</ColumnListItem>
+																	</items>
+																	<columns>
+																		<Column id="column0">
+																			<header>
+																				<Label text="Skills" id="label5"/>
+																			</header>
+																		</Column>
+																		<Column id="column1">
+																			<header>
+																				<Label text="Level" id="label6"/>
+																			</header>
+																		</Column>
+																	</columns>
+																</Table>
+															</content>
+														</IconTabBar>
+													</content>
+												</Panel>
+											</sap.ui.layout:content>
+										</sap.ui.layout:SplitPane>
+									</sap.ui.layout:panes>
+								</sap.ui.layout:PaneContainer>
+							</sap.ui.layout:rootPaneContainer>
+						</sap.ui.layout:ResponsiveSplitter>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
